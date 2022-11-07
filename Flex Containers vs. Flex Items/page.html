@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Flex Containers vs. Flex Items</title>
+</head>
+<body>
+  <a href="../index.html" class="back"></a>
+
+  <textarea rows="6">
+    <div class="container">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+    </div>
+  </textarea>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+    }
+    .child {
+      display: flex;
+      justify-content: space-between;
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; flex-direction: row; width: 500px; height: 200px;">
+    <div style="width:30px;height:30px;justify-content: space-between;" class="child">1</div>
+    <div style="width:30px;height:30px;justify-content: space-between;" class="child">2</div>
+    <div style="width:30px;height:30px;justify-content: space-between;" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      height: 200px;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px;justify-content: space-between;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    While some display types such as block & inline block
+    directly modify how an HTML element is displayed,
+    flex turns the element into a flex container & modifies
+    how the children are displayed
+  </p>
+
+
+</body>
+</html>

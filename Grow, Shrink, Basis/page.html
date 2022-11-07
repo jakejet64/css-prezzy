@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Grow, Shrink, Basis</title>
+</head>
+<body>
+  <a href="../index.html" class="back"></a>
+
+  <textarea rows="6">
+    <div class="container">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+    </div>
+  </textarea>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 90%;
+      height: 200px;
+      display: flex;
+    }
+    .child {
+      width: 30px;
+      height: auto;
+      flex: 1;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 90%; height: 200px;">
+    <div style="width:30px;height:auto;flex:1;" class="child">1</div>
+    <div style="width:30px;height:auto;flex:1;" class="child">2</div>
+    <div style="width:30px;height:auto;flex:1;" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    flex: 1; is shorthand for flex: 1 1 0;
+  </p>
+
+  <p>
+    further, that is shorthand for flex-grow: 1; flex-shrink: 1; flex-basis: 0;
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="14">
+    .container {
+      width: 90%;
+      height: 200px;
+      display: flex;
+    }
+    .child {
+      width: 100px;
+      height: auto;
+      flex-grow: 1;
+    }
+    .child:nth-child(2) {
+      flex-grow: 2;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 90%; height: 200px;">
+    <div style="width:100px;height:auto;flex-grow:1;" class="child">1</div>
+    <div style="width:100px;height:auto;flex-grow:2;" class="child">2</div>
+    <div style="width:100px;height:auto;flex-grow:1;" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    flex-grow determines the rate that a flex-item grows in comparison to those around it
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="14">
+    .container {
+      width: 90%;
+      height: 200px;
+      display: flex;
+    }
+    .child {
+      width: 300px;
+      height: auto;
+      flex-shrink: 1;
+    }
+    .child:nth-child(2) {
+      flex-shrink: 2;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 90%; height: 200px;">
+    <div style="width:300px;height:auto;flex-shrink:1;" class="child">1</div>
+    <div style="width:300px;height:auto;flex-shrink:2;" class="child">2</div>
+    <div style="width:300px;height:auto;flex-shrink:1;" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    flex-shrink determines the rate that a flex-item shrinks in comparison to those around it
+  </p>
+
+  <div class="line"></div>
+
+  <p>
+    flex-basis simply sets the initial size of a flex item, so any sort of flex-growing or flex-shrinking starts from that baseline size
+  </p>
+
+  <p>
+    you won't use flex-basis much, but remember flex: 1 is flex: 1 1 0, and will set flex-basis to 0, potentially breaking things since the default value is auto
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="14">
+    .container {
+      width: 90%;
+      height: 200px;
+      display: flex;
+    }
+    .child {
+      width: 300px;
+      height: auto;
+      flex-shrink: 1;
+    }
+    .child:nth-child(2) {
+      flex-shrink: 0;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 90%; height: 200px;">
+    <div style="width:300px;height:auto;flex-shrink:1;" class="child">1</div>
+    <div style="width:300px;height:auto;flex-shrink:0;" class="child">2</div>
+    <div style="width:300px;height:auto;flex-shrink:1;" class="child">3</div>
+  </div>
+
+  <p>
+    flex-shrink: 0 will keep an item from shrinking from its initial size
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="14">
+    .container {
+      width: 90%;
+      height: 200px;
+      display: flex;
+    }
+    .child {
+      width: 300px;
+      height: auto;
+      flex-grow: 1;
+    }
+    .child:nth-child(2) {
+      flex-grow: 0;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 90%; height: 200px;">
+    <div style="width:300px;height:auto;flex-grow:1;" class="child">1</div>
+    <div style="width:300px;height:auto;flex-grow:0;" class="child">2</div>
+    <div style="width:300px;height:auto;flex-grow:1;" class="child">3</div>
+  </div>
+
+  <p>
+    flex-grow: 0 will keep an item from growing from its initial size
+  </p>
+
+</body>
+</html>

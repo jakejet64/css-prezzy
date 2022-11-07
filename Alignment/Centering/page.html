@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Alignment/Centering</title>
+</head>
+<body>
+  <a href="../../index.html" class="back"></a>
+
+  <textarea rows="6">
+    <div class="container">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+    </div>
+  </textarea>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: start;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; justify-content: start;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; justify-content: center;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: end;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; justify-content: end;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>justify-content: start, center, end are all pretty self explanatory</p>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; justify-content: space-evenly;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>justify-content: space-evenly will give the same amount of room between flex-items
+     & container edges
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; justify-content: space-around;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>justify-content: space-around will give the same amount of space to the left & right
+    of each flex-item
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; justify-content: space-between;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>justify-content: space-between will give the same amount of space between children, while disregarding the space between flex-items & container edges
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; align-items:flex-start;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; align-items:center;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; align-items:flex-end;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <textarea rows="10">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      align-items: stretch;
+    }
+    .child {
+      width: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; align-items:stretch;">
+    <div style="width:30px;" class="child">1</div>
+    <div style="width:30px;" class="child">2</div>
+    <div style="width:30px;" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    align-items: flex-start, center, flex-end, and stretch are all self explanatory as well
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="13">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      align-items: stretch;
+    }
+    .child {
+      width: 30px;
+    }
+    .child:nth-child(2) {
+      align-self: center;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; align-items:stretch;">
+    <div style="width:30px;" class="child">1</div>
+    <div style="width:30px;align-self: center;" class="child">2</div>
+    <div style="width:30px;" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    Additionally, align-self can be used on flex-items to set an individual vertical alignment
+  </p>
+
+  <div class="line"></div>
+
+  <p>
+    When using flex-direction:column, the effect that any of these properties have will swap vertical <-> horizontal
+  </p>
+
+  <div class="line"></div>
+
+  <textarea rows="11">
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      gap: 5px;
+    }
+    .child {
+      width: 30px;
+      height: 30px;
+    }
+  </textarea>
+
+  <div class="container" style="display: flex; width: 500px; height: 200px; gap:5px;">
+    <div style="width:30px;height:30px" class="child">1</div>
+    <div style="width:30px;height:30px" class="child">2</div>
+    <div style="width:30px;height:30px" class="child">3</div>
+  </div>
+
+  <div class="line"></div>
+
+  <p>
+    gap will set the minimum space between items
+  </p>
+
+
+
+
+</body>
+</html>

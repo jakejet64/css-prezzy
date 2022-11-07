@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a:hover {
+  transform: scale(1.05);
+}
+
+.back {
+  background-image: url(./resources/home-circle-outline.png);
+  background-size: 40px 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+textarea {
+  font-family: monospace;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid #558ABB;
+  color: #4D4E53;
+  width: 70%;
+  max-width: 700px;
+  padding: 10px 10px 0px;
+  font-size: 90%;
+}
+
+.line {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px 0px;
+  height: 1px;
+  background-color: #4D4E53;
+}
+
+p {
+  width: 90%;
+  max-width: 700px;
+}
+
+.container {
+  padding: 5px;
+  border: 2px solid rgb(15, 110, 205)
+}
+
+.child {
+  padding: 5px;
+  border: 2px solid rgb(15, 110, 205);
+}
+
+.learn-more {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
